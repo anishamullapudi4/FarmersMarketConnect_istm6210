@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Farmers Market Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <div class="login-box">
+    <form id="loginForm" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+      <label for="username">Username: </label>
+      <input type="text" name="username" value="" id="username">
+      <br>
+      <label for="password">Password: </label>
+      <input type="password" name="password" value="" id="password">
+      <br>
+      <input type="checkbox" onclick="showPassword()"> Show Password
+    </form>
+      <br>
+      <button type="submit" form="loginForm" value="submit">Login</button>
+      <br><br>
+      <a href="createAccount.html">Create Account</a>
+      <br>
+      <a href="forgotPassword.html">Forgot Password</a>
+
+    <script type="text/javascript">
+      function showPassword() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+
+  </div>
+</body>
+
+</html>
