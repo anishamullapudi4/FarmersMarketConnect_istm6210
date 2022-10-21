@@ -4,9 +4,102 @@
   <meta charset="utf-8">
   <title>Farmers Market Connect</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="javascript.js"></script>
+<!--  <script src="javascript.js"></script> -->
 </head>
 <body>
-  <h1>Create Account Page</h1>
+  <h1>Create Account</h1>
+
+  <form id="createAccountForm" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+    <fieldset id="selectRole">
+      <legend>Please Select Your Role</legend>
+      <input type="radio" name="role" id="customerRole" class="role" value="Customer" onclick="showCustomerFields();">
+      <label for="customerRole" onclick="showCustomerFields();">Customer</label>
+      <input type="radio" name="role" id="vendorRole" class="role" value="Vendor" onclick="showVendorFields();">
+      <label for="vendorRole" onclick="showVendorFields();">Vendor</label>
+    </fieldset>
+    <fieldset id="customerFields" hidden>
+      <legend>Customer Information</legend>
+      <label for="cName">Name: </label>
+      <input type="text" name="cName" id="cName" value="">
+      <br>
+      <label for="cUsername">Username: </label>
+      <input type="text" name="cUsername" id="cUsername" value="">
+      <br>
+      <label for="cPassword">Password: </label>
+      <input type="password" name="cPassword" id="cPassword" value="">
+      <br>
+      <!-- VALIDATION NEEDED -->
+      <label for="cConfirmPassword">Confirm Password: </label>
+      <input type="password" name="cConfirmPassword" id="cConfirmPassword" value="">
+      <br>
+      <label for="cAddress">Address: </label>
+      <input type="text" name="cAddress" id="cAddress" value="">
+      <br>
+      <label for="cEmail">Email: </label>
+      <input type="email" name="cEmail" id="cEmail">
+      <br>
+    </fieldset>
+
+    <fieldset id="vendorFields" hidden>
+      <legend>Vendor Information</legend>
+      <label for="vName">Name: </label>
+      <input type="text" name="vName" id="vName" value="">
+      <br>
+      <label for="vUsername">Username: </label>
+      <input type="text" name="vUsername" id="vUsername" value="">
+      <br>
+      <label for="vPassword">Password: </label>
+      <input type="password" name="vPassword" id="vPassword" value="">
+      <br>
+      <!-- VALIDATION NEEDED -->
+      <label for="vConfirmPassword">Confirm Password: </label>
+      <input type="password" name="vConfirmPassword" id="vConfirmPassword" value="">
+      <br>
+      <label for="vAddress">Address: </label>
+      <input type="text" name="vAddress" id="vAddress" value="">
+      <br>
+      <label for="vEmail">Email: </label>
+      <input type="email" name="vEmail" id="vEmail">
+      <br>
+      <label for="vCategory">Product Category: </label>
+      <select class="vCategory" name="vCategory">
+        <option value="">Select Category</option>
+        <option value="produce">Produce</option>
+        <option value="meat">Meat</option>
+        <option value="pasta">Pasta</option>
+        <option value="florist">Florist</option>
+        <option value="coffee">Coffee</option>
+        <option value="alcohol">Alcohol</option>
+        <option value="misc">Miscellaneous</option>
+      </select>
+      <br>
+      <label for="vMarket">Market Applying To: </label>
+      <select class="vMarket" name="vMarket">
+        <!-- populate with DMV market names -->
+      </select>
+    </fieldset>
+
+  </form>
+  <br>
+  <!-- button to submit form; submitted form info goes to db (for not user randyconnolly website) -->
+  <button type="submit" id="cButton" form="createAccountForm" hidden>Create Account</button>
+  <button type="submit" id="vButton" form="createAccountForm" hidden>Submit Application</button>
+<!-- javascript functions to show/hide information fields based on role chosen -->
+<script type="text/javascript">
+function showCustomerFields() {
+   document.getElementById("customerFields").hidden = false;
+   document.getElementById("vendorFields").hidden = true;
+   document.getElementById("cButton").hidden = false;
+   document.getElementById("vButton").hidden = true;
+}
+
+function showVendorFields() {
+   document.getElementById("vendorFields").hidden = false;
+   document.getElementById("customerFields").hidden = true;
+   document.getElementById("vButton").hidden = false;
+   document.getElementById("cButton").hidden = true;
+}
+</script>
+
 </body>
 </html>
