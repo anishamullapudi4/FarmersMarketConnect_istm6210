@@ -10,7 +10,7 @@
 <body>
 <div class="heading">
 <div class="top-heading">
-<img src="logo.jpg" alt="FMC logo" width="100px">
+<img src="/images/logo.jpg" alt="FMC logo" width="100px">
 </div>
   <div class="navbar d-flex flex-row bd-highlight mb-3" id="vendorNav">
     <div class="p-2 bd-highlight" id="homelink"><a href="homeV.php">Home</a></div>

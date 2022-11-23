@@ -136,3 +136,24 @@ h3.ancmnts-head {
   from {opacity: .4}
   to {opacity: 1}
 }*/
+
+/* table formatting */
+.empty-cell {
+  width: 25px;
+}
+
+.product-img {
+  width: 400px;
+}
+
+.padding-cell {
+  width: 50px;
+}
+
+.product-name {
+  width: 225px;
+}
+
+.price-cell {
+  width: 75px;
+}
