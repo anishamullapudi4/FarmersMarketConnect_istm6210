@@ -23,17 +23,17 @@
     <div class="slideshow-container">
       <div class="mySlidesAncmnt">
         <div class="numberstext">1 / 3</div>
-        <img src="/images/ancmnt1.png" style="width:100%;" alt="Announcement1">
+        <img src="/images/ancmnt1.jpg" style="width:100%;" alt="Announcement1">
         <div class="text">Announcement 1 Title</div>
       </div>
       <div class="mySlidesAncmnt">
         <div class="numberstext">2 / 3</div>
-        <img src="/images/ancmnt2.png" style="width:100%;" alt="Announcement2">
+        <img src="/images/ancmnt2.jpg" style="width:100%;" alt="Announcement2">
         <div class="text">Announcement 2 Title</div>
       </div>
       <div class="mySlidesAncmnt">
         <div class="numberstext">3 / 3</div>
-        <img src="/images/ancmnt3.png" style="width:100%;" alt="Announcement3">
+        <img src="/images/ancmnt3.jpg" style="width:100%;" alt="Announcement3">
         <div class="text">Announcement 3 Title</div>
       </div>
       <a class="prev" onclick="plusSlidesA(-1)">&#10094;</a>
@@ -53,10 +53,10 @@
     <!-- carousel of links to customer profiles where vendor clicks on name or image and it sets the url query string as that customer id -->
       <table class="followersTable">
         <tr>
-          <th>@user1</th>
-          <th>@user2</th>
-          <th>@user3</th>
-          <th>@user4</th>
+          <th>@Tabby231</th>
+          <th>@java_joe</th>
+          <th>@Melanie27</th>
+          <th>@MattyMatt</th>
         </tr>
         <tr>
           <td><img src="images/follower1.jpg" class="followerImg"></td>
@@ -91,9 +91,9 @@
     </div>
     <br>
     <div style="text-align:center;">
-      <span class="dotR" onclick="currentSlideR(1)"></span>
-      <span class="dotR" onclick="currentSlideR(2)"></span>
-      <span class="dotR" onclick="currentSlideR(3)"></span>
+      <span class="dot" onclick="currentSlideR(1)"></span>
+      <span class="dot" onclick="currentSlideR(2)"></span>
+      <span class="dot" onclick="currentSlideR(3)"></span>
     </div>
 
     <script type="text/javascript">
@@ -146,14 +146,14 @@
     function showSlidesR(n) {
     let j;
     let slidesR = document.getElementsByClassName("mySlidesReport");
-    let dotsR = document.getElementsByClassName("dotR");
-    if (n > slides.length) {slideIndexR = 1}
-    if (n < 1) {slideIndexR = slides.length}
-    for (j = 0; j < slides.length; j++) {
+    let dotsR = document.getElementsByClassName("dot");
+    if (n > slidesR.length) {slideIndexR = 1}
+    if (n < 1) {slideIndexR = slidesR.length}
+    for (j = 0; j < slidesR.length; j++) {
       slidesR[j].style.display = "none";
     }
 
-    for (j = 0; j < dots.length; j++) {
+    for (j = 0; j < dotsR.length; j++) {
       dotsR[j].className = dotsR[j].className.replace(" active", "");
     }
     slidesR[slideIndexR-1].style.display = "block";

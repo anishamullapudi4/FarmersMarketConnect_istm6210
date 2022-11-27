@@ -9,16 +9,8 @@
 </head>
 <body>
 <div class="heading">
-<div class="top-heading">
-<img src="/images/logo.jpg" alt="FMC logo" width="100px">
-</div>
-  <div class="navbar d-flex flex-row bd-highlight mb-3" id="vendorNav">
-    <div class="p-2 bd-highlight" id="homelink"><a href="homeV.php">Home</a></div>
-    <div class="p-2 bd-highlight"><a href="productsV.php">Products</a></div>
-    <div class="p-2 bd-highlight"><a href="inventoryTracking.php">Inventory</a></div>
-    <div class="p-2 bd-highlight"><a href="homeV.php#followers">Followers</a></div>
-    <div class="p-2 bd-highlight"><a href="homeV.php#reports">Reports</a></div>
-  </div>
+  <?php include '../includes/headV.inc.php';  ?>
+  <?php include '../includes/navV.inc.php'; ?>
 </div>
 <div class="container">
   <h1 class="pageTitle">Your Products</h1>
@@ -27,8 +19,6 @@
   <tr>
       <th colspan="14">
           <a href="addProduct.php"><button type="button" name="button">Add Product</button></a>
-          &nbsp; &nbsp; &nbsp;
-          <a href="editProduct.php"><button type="button" name="button">Edit Product</button></a>
       </th>
   </tr>
   <tr>
@@ -45,20 +35,23 @@
     </td>
   </tr>
   <tr>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Red Apple</td>
     <td class="price-cell">$4.00</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
     <td class="empty-cell"><!-- empty as a padding/border --></td>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Carrot</td>
     <td class="price-cell">$2.50</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
     <td class="empty-cell"><!-- empty as a padding/border --></td>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Green Bell Pepper</td>
     <td class="price-cell">$3.50</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
   </tr>
   <tr>
     <td colspan="4">
@@ -74,20 +67,23 @@
     </td>
   </tr>
   <tr>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Baguette</td>
     <td class="price-cell">$5.25</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
     <td class="empty-cell"><!-- empty as a padding/border --></td>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Biscuit</td>
     <td class="price-cell">$2.25</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
     <td class="empty-cell"><!-- empty as a padding/border --></td>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Cucumber</td>
     <td class="price-cell">$2.75</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
   </tr>
   <tr>
     <td colspan="4">
@@ -103,20 +99,23 @@
     </td>
   </tr>
   <tr>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Radishes</td>
     <td class="price-cell">$4.50</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
     <td class="empty-cell"><!-- empty as a padding/border --></td>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Gnocchi</td>
     <td class="price-cell">$7.75</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
     <td class="empty-cell"><!-- empty as a padding/border --></td>
-    <td class="padding-cell"><!-- empty as a padding/border --></td>
     <td class="product-name">Ravioli</td>
     <td class="price-cell">$7.25</td>
     <td class="padding-cell"></td>
+    <!-- once funtioncality is added, we will be adding the product id that corresponds to the Products DB -->
+    <td class="btn-cell"><a href="editProduct.php"><button type="button" name="editProdBtn">Edit Product</button></a></td>
   </tr>
 </table>
 <br><br><br>

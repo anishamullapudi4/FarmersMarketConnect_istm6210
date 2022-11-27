@@ -6,8 +6,16 @@ form {
   background-color: rgba(121, 152, 125, 0.5);
 }
 
+footer {
+  width: auto;
+}
+
 .pageTitle {
   text-align: center;
+}
+
+.top-heading, #vendorNav {
+  background-color: rgba(121, 152, 125, 0.5);
 }
 
 .announcement {
@@ -16,10 +24,6 @@ form {
 
 h3.ancmnts-head {
   text-align: center;
-}
-
-.ancmnts {
-    background-color: rgba(121, 152, 125, 0.5);
 }
 
 .followersTable {
@@ -160,13 +164,17 @@ h3.ancmnts-head {
 }
 
 .padding-cell {
-  width: 50px;
+  width: 15px;
 }
 
 .product-name {
-  width: 225px;
+  width: 175px;
 }
 
 .price-cell {
   width: 75px;
+}
+
+.btn-cell {
+  width: 135px;
 }
