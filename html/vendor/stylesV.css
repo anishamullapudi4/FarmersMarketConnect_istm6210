@@ -19,7 +19,19 @@ h3.ancmnts-head {
 }
 
 .ancmnts {
-    background-color: green;
+    background-color: rgba(121, 152, 125, 0.5);
+}
+
+.followersTable {
+  width: 95%;
+}
+
+.followerImg {
+  width: 250px;
+}
+
+.inventoryBtns {
+  text-align: center;
 }
 
 .horizontal-scrollable > .row {
@@ -144,6 +156,7 @@ h3.ancmnts-head {
 
 .product-img {
   width: 400px;
+  padding-top: 10px;
 }
 
 .padding-cell {

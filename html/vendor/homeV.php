@@ -20,42 +20,30 @@
     <!-- carousel of most recent announcements -->
     <!-- can we store all announcements in DB then call/display an image, title, and description of each announcement here for users to click on for more details..? -->
 
-    <div class="row text-center">
-      <div class="col-xs-4">
-        <img src="/images/ancmnt1.png" alt="announcement1" class="announcement"><br>
-        <h5>Announcement Title</h5>
-        <p>First line / description</p>
+    <div class="slideshow-container">
+      <div class="mySlidesAncmnt">
+        <div class="numberstext">1 / 3</div>
+        <img src="/images/ancmnt1.png" style="width:100%;" alt="Announcement1">
+        <div class="text">Announcement 1 Title</div>
       </div>
-      <div class="col-xs-4">
-        <img src="/images/ancmnt2.png" alt="announcement2" class="announcement"><br>
-        <h5>Announcement Title</h5>
-        <p>First line / description</p>
+      <div class="mySlidesAncmnt">
+        <div class="numberstext">2 / 3</div>
+        <img src="/images/ancmnt2.png" style="width:100%;" alt="Announcement2">
+        <div class="text">Announcement 2 Title</div>
       </div>
-      <div class="col-xs-4">
-        <img src="/images/ancmnt3.png" alt="announcement3" class="announcement"><br>
-        <h5>Announcement Title</h5>
-        <p>First line / description</p>
+      <div class="mySlidesAncmnt">
+        <div class="numberstext">3 / 3</div>
+        <img src="/images/ancmnt3.png" style="width:100%;" alt="Announcement3">
+        <div class="text">Announcement 3 Title</div>
       </div>
-    <!--  <div class="col-xs-4">
-        <img src="../../images/ancmnt4.png" alt="announcement4"><br>
-        <h4>Announcement Title</h4>
-        <p>First line of announcement or description</p>
-      </div>
-      <div class="col-xs-4">
-        <img src="../../images/ancmnt5.png" alt="announcement5"><br>
-        <h4>Announcement Title</h4>
-        <p>First line of announcement or description</p>
-      </div>
-      <div class="col-xs-4">
-        <img src="../../images/ancmnt6.png" alt="announcement6"><br>
-        <h4>Announcement Title</h4>
-        <p>First line of announcement or description</p>
-      </div>
-      <div class="col-xs-4">
-        <img src="../../images/ancmnt7.png" alt="announcement7"><br>
-        <h4>Announcement Title</h4>
-        <p>First line of announcement or description</p>
-      </div> -->
+      <a class="prev" onclick="plusSlidesA(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlidesA(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center;">
+      <span class="dot" onclick="currentSlideA(1)"></span>
+      <span class="dot" onclick="currentSlideA(2)"></span>
+      <span class="dot" onclick="currentSlideA(3)"></span>
     </div>
 
 
@@ -63,65 +51,115 @@
   <div class="followers" id="followers">
     <h3>Followers</h3>
     <!-- carousel of links to customer profiles where vendor clicks on name or image and it sets the url query string as that customer id -->
+      <table class="followersTable">
+        <tr>
+          <th>@user1</th>
+          <th>@user2</th>
+          <th>@user3</th>
+          <th>@user4</th>
+        </tr>
+        <tr>
+          <td><img src="images/follower1.jpg" class="followerImg"></td>
+          <td><img src="images/follower2.jpg" class="followerImg"></td>
+          <td><img src="images/follower3.jpg" class="followerImg"></td>
+          <td><img src="images/follower4.jpg" class="followerImg"></td>
+        </tr>
+      </table>
+
   </div>
   <div class="" id="reports">
     <h3>Reports</h3>
     <!-- images / descriptions of reports -->
     <div class="slideshow-container">
-      <div class="mySlides">
+      <div class="mySlidesReport">
         <div class="numberstext">1 / 3</div>
         <img src="/images/reportVendor.png" style="width:100%;" alt="vendorReport">
         <div class="text">Vendor Report 1</div>
       </div>
-      <div class="mySlides">
+      <div class="mySlidesReport">
         <div class="numberstext">2 / 3</div>
         <img src="/images/reportAdmin.png" style="width:100%;" alt="adminReport">
         <div class="text">Admin Report 1</div>
       </div>
-      <div class="mySlides">
+      <div class="mySlidesReport">
         <div class="numberstext">3 / 3</div>
         <img src="/images/ancmnt8.png" style="width:100%;" alt="img3">
         <div class="text">Sample Third Photo</div>
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlidesR(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlidesR(1)">&#10095;</a>
     </div>
     <br>
     <div style="text-align:center;">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dotR" onclick="currentSlideR(1)"></span>
+      <span class="dotR" onclick="currentSlideR(2)"></span>
+      <span class="dotR" onclick="currentSlideR(3)"></span>
     </div>
 
     <script type="text/javascript">
+    // Announcements Slides
     let slideIndex = 1;
-    showSlides(slideIndex);
+    showSlidesA(slideIndex);
 
     // Next/previous controls
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
+    function plusSlidesA(m) {
+    showSlidesA(slideIndex += m);
     }
 
     // Thumbnail image controls
-    function currentSlide(n) {
-    showSlides(slideIndex = n);
+    function currentSlideA(m) {
+    showSlidesA(slideIndex = m);
     }
 
-    function showSlides(n) {
+    function showSlidesA(m) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("mySlidesAncmnt");
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    if (m > slides.length) {slideIndex = 1}
+    if (m < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
+
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     }
+
+
+    // Reports Slideshow
+    let slideIndexR = 1;
+    showSlidesR(slideIndexR);
+
+    // Next/previous controls
+    function plusSlidesR(n) {
+    showSlidesR(slideIndexR += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlideR(n) {
+    showSlidesR(slideIndexR = n);
+    }
+
+    function showSlidesR(n) {
+    let j;
+    let slidesR = document.getElementsByClassName("mySlidesReport");
+    let dotsR = document.getElementsByClassName("dotR");
+    if (n > slides.length) {slideIndexR = 1}
+    if (n < 1) {slideIndexR = slides.length}
+    for (j = 0; j < slides.length; j++) {
+      slidesR[j].style.display = "none";
+    }
+
+    for (j = 0; j < dots.length; j++) {
+      dotsR[j].className = dotsR[j].className.replace(" active", "");
+    }
+    slidesR[slideIndexR-1].style.display = "block";
+    dotsR[slideIndexR-1].className += " active";
+    }
+
     </script>
 
   </div>
