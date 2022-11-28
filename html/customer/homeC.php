@@ -53,7 +53,7 @@
     <!-- carousel of links to customer profiles where vendor clicks on name or image and it sets the url query string as that customer id -->
       <table class="followersTable">
         <tr>
-          <th>@Tabby231</th>
+          <th>@Gabriel</th>
           <th>@java_joe</th>
           <th>@Melanie27</th>
           <th>@MattyMatt</th>
