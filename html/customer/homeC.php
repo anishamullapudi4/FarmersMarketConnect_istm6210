@@ -55,7 +55,7 @@
       <table class="vendorsTable">
         <tr>
           <th>@gabriel_farms</th>
-          <th>@fresh_baked</th>
+          <th>@Echo_valley_farms</th>
           <th>@Melanie27</th>
           <th>@MattyMatt</th>
         </tr>
@@ -76,39 +76,42 @@
         <tr>
           <td>
             <h4>Freshfarm Dupont Circle Market</h4></br>
-            <h6>The Dupont Circle farmers market, one of the area’s most popular, offers something for everyone. Stop at one of the numerous farm stands to pick up herbs, vegetables, fruit, and free-range eggs. Several local creameries sell sheep and goat’s milk cheese and yogurt. Vegan soup, pancakes, wood-fired pizza, and bagels from a celebrated local deli make it a good bet for lunch. Beverage makers sell locally made cider, beer, liqueurs, and spirits during market hours, Sundays from 8:30 a.m. to 1:30 p.m.<h6> </td>
-            <td><img src="imagesC/market1.jpg" width= "700" height="300" alt="Market" /></td>
+            <h6>The Dupont Circle farmers market, one of the area’s most popular, offers something for everyone. Stop at one of the numerous farm stands to pick up herbs, vegetables, fruit, and free-range eggs. Several local creameries sell sheep and goat’s milk cheese and yogurt. Vegan soup, pancakes, wood-fired pizza, and bagels from a celebrated local deli make it a good bet for lunch. Beverage makers sell locally made cider, beer, liqueurs, and spirits during market hours, Sundays from 8:30 a.m. to 1:30 p.m.<h6> </br>
+            <h6><a href="market1map.html">1600 20th St NW, Washington, DC 20036</a></h6></br>
+            <h6><a href="directions.html">(202) 362-8889</a></h6></td>
+            <td><img src="imagesC/market1.jpg" width= "600" height="300" alt="Market" /></td>
           </tr>
-          <tr>
-            <td>
-              <h4>Mount Pleasant Farmers Market</h4></br>
-            </h6>Live music, book sales, and a bike clinic animate this Mt. Pleasant market, open 9 a.m. to 1 p.m. on Saturdays. Farmers, bakers, and pickle makers from the mid-Atlantic sell everything from baby greens to grass-fed beef, kimchi, mint, and basil. <h6> </td>
-              <td><img src="imagesC/market2.jpg" width= "700" height="300" alt="Market" /></td>
-            </tr>
+
             <tr>
               <td>
                 <h4>Columbia Heights Farmers Market</h4></br>
-                <h6>Handmade pasta, plant-based sausages, microgreens, and Eastern Shore mushrooms make this market a favorite among vegetarians. The market hosts 20 farmers and food producers Saturday mornings from 9 a.m. to 1 p.m. in the colorful Civic Plaza. </h6> </td>
-                <td><img src="imagesC/market3.jpg" width= "700" height="300" alt="Market" /></td>
+                <h6>Handmade pasta, plant-based sausages, microgreens, and Eastern Shore mushrooms make this market a favorite among vegetarians. The market hosts 20 farmers and food producers Saturday mornings from 9 a.m. to 1 p.m. in the colorful Civic Plaza. </h6></br>
+                <h6><a href="directions.html">
+1400 Park Rd NW, Washington, DC 20010</a></h6></br>
+                <h6><a href="directions.html">(202) 451-8989</a></h6></td>
+
+                <td><img src="imagesC/market2.jpg" width= "600" height="300" alt="Market" /></td>
               </tr>
               <tr>
                 <td>
                   <h4>Silver Spring Farmers Market</h4></br>
-                  <h6>Meat and dairy lovers will enjoy this farmers market, which sells pasture-raised meat, poultry, and eggs, as well as goat, cow, and sheep’s milk cheeses and yogurts. Beets, kale, and kohlrabi are among the featured produce. After food shopping, pick up some beeswax candles, soaps, and lotions and sip some apple and hard cider, or Maryland-produced wine and beer. It’s open Saturdays from 9 a.m. to 1 p.m.</h6> </td>
-                  <td><img src="imagesC/market4.jpg" width= "700" height="300" alt="Market" /></td>
+                  <h6>Meat and dairy lovers will enjoy this farmers market, which sells pasture-raised meat, poultry, and eggs, as well as goat, cow, and sheep’s milk cheeses and yogurts. Beets, kale, and kohlrabi are among the featured produce. After food shopping, pick up some beeswax candles, soaps, and lotions and sip some apple and hard cider, or Maryland-produced wine and beer. It’s open Saturdays from 9 a.m. to 1 p.m.</h6></br>
+                  <h6><a href="directions.html">890 Ellsworth Dr, Silver Spring, MD 20910</a></h6></br>
+                  <h6><a href="directions.html">(202) 263-9889</a></h6></td></td>
+                  <td><img src="imagesC/market3.jpg" width= "600" height="300" alt="Market" /></td>
                 </tr>
                 <tr>
                   <td>
                     <h4>Freshfarm Penn Quater Market</h4></br>
-                    <h6>Located next to the Smithsonian National Portrait Gallery, the market features wood-fired pizza from Timber Pizza, scones and brownies from Rare Opportunity Farm and Bakehouse, and other mouthwatering fare. Fall produce finds include spring onions, radishes, broccoli, and fresh herbs like parsley, sage, and thyme. Get these items and more on Thursdays from 3 to 7 p.m. </h6> </td>
-                    <td><img src="imagesC/market5.jpg" width= "700" height="300" alt="Market" /></td>
+                    <h6>Located next to the Smithsonian National Portrait Gallery, the market features wood-fired pizza from Timber Pizza, scones and brownies from Rare Opportunity Farm and Bakehouse, and other mouthwatering fare. Fall produce finds include spring onions, radishes, broccoli, and fresh herbs like parsley, sage, and thyme. Get these items and more on Thursdays from 3 to 7 p.m. </h6></br>
+                    <h6><a href="directions.html">801 F St NW, Washington, DC 20004</a></h6></br>
+                    <h6><a href="directions.html">(202) 362-8889</a></h6></td>
+
+                    <td><img src="imagesC/market4.jpg" width= "600" height="300" alt="Market" /></td>
                   </tr>
                 </div>
 
-
-
-  <div class="bg-footer" id="footer"><?php include '../includes/footer.inc.php'; ?></div>
-
-</div> <!-- closing div for container -->
+</div>
+<!-- closing div for container -->
 </body>
 </html>
