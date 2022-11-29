@@ -8,8 +8,10 @@
   <script src="javascript.js"></script>
 </head>
 <body>
+  <div class="top-heading">
+  <img src="logo.jpg" alt="FMC logo" width="100px">
+  </div>
 <div class="heading">
-  <?php include '../includes/headV.inc.php';  ?>
   <?php include '../includes/navC.inc.php'; ?>
 </div>
 <div class="container">
