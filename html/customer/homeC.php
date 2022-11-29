@@ -86,8 +86,8 @@
               <td>
                 <h4>Columbia Heights Farmers Market</h4></br>
                 <h6>Handmade pasta, plant-based sausages, microgreens, and Eastern Shore mushrooms make this market a favorite among vegetarians. The market hosts 20 farmers and food producers Saturday mornings from 9 a.m. to 1 p.m. in the colorful Civic Plaza. </h6></br>
-                <h6><a href="directions.html">
-1400 Park Rd NW, Washington, DC 20010</a></h6></br>
+                <h6><a href="market2map.html">
+                  1400 Park Rd NW, Washington, DC 20010</a></h6></br>
                 <h6><a href="directions.html">(202) 451-8989</a></h6></td>
 
                 <td><img src="imagesC/market2.jpg" width= "600" height="300" alt="Market" /></td>
@@ -96,7 +96,7 @@
                 <td>
                   <h4>Silver Spring Farmers Market</h4></br>
                   <h6>Meat and dairy lovers will enjoy this farmers market, which sells pasture-raised meat, poultry, and eggs, as well as goat, cow, and sheep’s milk cheeses and yogurts. Beets, kale, and kohlrabi are among the featured produce. After food shopping, pick up some beeswax candles, soaps, and lotions and sip some apple and hard cider, or Maryland-produced wine and beer. It’s open Saturdays from 9 a.m. to 1 p.m.</h6></br>
-                  <h6><a href="directions.html">890 Ellsworth Dr, Silver Spring, MD 20910</a></h6></br>
+                  <h6><a href="market3map.html">890 Ellsworth Dr, Silver Spring, MD 20910</a></h6></br>
                   <h6><a href="directions.html">(202) 263-9889</a></h6></td></td>
                   <td><img src="imagesC/market3.jpg" width= "600" height="300" alt="Market" /></td>
                 </tr>
@@ -104,7 +104,7 @@
                   <td>
                     <h4>Freshfarm Penn Quater Market</h4></br>
                     <h6>Located next to the Smithsonian National Portrait Gallery, the market features wood-fired pizza from Timber Pizza, scones and brownies from Rare Opportunity Farm and Bakehouse, and other mouthwatering fare. Fall produce finds include spring onions, radishes, broccoli, and fresh herbs like parsley, sage, and thyme. Get these items and more on Thursdays from 3 to 7 p.m. </h6></br>
-                    <h6><a href="directions.html">801 F St NW, Washington, DC 20004</a></h6></br>
+                    <h6><a href="market4map.html">801 F St NW, Washington, DC 20004</a></h6></br>
                     <h6><a href="directions.html">(202) 362-8889</a></h6></td>
 
                     <td><img src="imagesC/market4.jpg" width= "600" height="300" alt="Market" /></td>
