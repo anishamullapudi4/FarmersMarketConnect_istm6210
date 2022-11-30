@@ -51,7 +51,7 @@
 <!--list of vendors-->
 
   </div>
-  <div class="vendors" id="vendors">
+  <d`iv class="vendors" id="vendors">
     <h3>Top Rated Vendors</h3>
     <!-- carousel of links to customer profiles where vendor clicks on name or image and it sets the url query string as that customer id -->
       <table class="vendorsTable">
@@ -73,7 +73,9 @@
   <!-- list of markets-->
 
   <div class="markets" id="markets">
-    <h3>Markets<h3>
+    <h2>Markets</h2></div>
+    <div class="market-table">
+
       <table>
         <tr>
           <td>
@@ -112,6 +114,9 @@
                     <td><img src="imagesC/market4.jpg" width= "600" height="300" alt="Market" /></td>
                   </tr>
                 </div>
+
+                <div class="bg-footer" id="footer"><?php include '../includes/footer.inc.php'; ?></div>
+
 
 </div>
 <!-- closing div for container -->

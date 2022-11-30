@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Farmers Market Connect</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="javascript.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farmers Market Connect</title>
+<style>
+html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+	background-color: #000;
+	background-image: url("images/bg.jpg");
+	background-size: cover;
+  opacity: 0.4;
+	background-repeat:no-repeat;
+}
+h2 {
+  position: absolute;
+  margin: auto;
+  
+}
+.login-box {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  position: sticky;
+  max-width: 300px;
+  max-height: 500px;
+  background-color: white;
+  margin: auto;
+  margin-top: 250px;
+}
+</style>
 </head>
-<body></body>
+<body>
+  <h1> Welcome to Farmers Market Connect</h1>
+  <div class="login-box">
+    <form id="loginForm" align="Center" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+      <label for="username">Username: </label>
+      <input type="text" name="username" value="" id="username">
+      <br>
+      <label for="password">Password: </label>
+      <input type="password" name="password" value="" id="password">
+      <br>
+      <input type="checkbox" onclick="showPassword()"> Show Password
+    </form>
+      <br>
+      <button type="submit" form="loginForm" value="submit">Login</button>
+      <br><br>
+      <a href="createAccount.html">Create Account</a>
+      <br>
+      <a href="forgotPassword.html">Forgot Password</a>
+
+    <script type="text/javascript">
+      function showPassword() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+
+  </div>
+</body>
 </html>

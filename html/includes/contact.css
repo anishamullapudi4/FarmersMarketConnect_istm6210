@@ -1,0 +1,72 @@
+body,html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+	background-color: #000;
+	background-image: url("images/contact.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+
+.bg {
+  /* Full height */
+  height: 100%;
+  width:100%;
+}
+.wrapper {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+.site-content {
+  margin-top: 100px;
+	align-content: center;
+}
+
+.map{
+	width: 100%;
+}
+.footer {
+  text-align: center;
+}
+
+.overlap{
+  height: 30%;
+  width:15%;
+  position: relative;
+  top:-10%;
+  left:5%;
+  float: left;
+}
+.details{
+  float: left;
+  position: relative;
+  left: 7%;
+}
+
+
+#form_container
+{
+	padding:15px 15px;
+	margin-top:15px;
+	background: rgba(0,0,0,0.5);
+	color:#fff;
+}
+
+.upload-btn-wrapper
+{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file]
+{
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
