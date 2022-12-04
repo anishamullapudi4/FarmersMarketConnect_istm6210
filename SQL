@@ -1,0 +1,196 @@
+CREATE DATABASE FMC;
+USE FMC;
+
+CREATE TABLE Admin(
+AdminID VARCHAR(30) NOT NULL,
+UserType VARCHAR(30) NOT NULL,
+Username VARCHAR(30) NOT NULL,
+Email VARCHAR(30) NOT NULL,
+PW VARCHAR(30) NOT NULL,
+FirstName VARCHAR(30) NOT NULL,
+LastName VARCHAR(30) NOT NULL,
+Address VARCHAR(100) NOT NULL,
+PhoneNumber CHAR(10) NULL,
+WorkingHours INT(3) NULL,
+
+CONSTRAINT Admin_PK PRIMARY KEY(AdminID)
+);
+
+CREATE TABLE Vendor(
+VendorID VARCHAR(30) NOT NULL,
+UserType VARCHAR(30) NOT NULL,
+Username VARCHAR(30) NOT NULL,
+Email VARCHAR(30) NOT NULL,
+PW VARCHAR(30) NOT NULL,
+FirstName VARCHAR(30) NOT NULL,
+LastName VARCHAR(30) NOT NULL,
+Address VARCHAR(100) NOT NULL,
+WorkingLocations VARCHAR(100) NOT NULL,
+RegistrationDate DATE NOT NULL,
+
+CONSTRAINT Vendor_PK PRIMARY KEY(VendorID)
+);
+
+CREATE TABLE Customer(
+CustomerID VARCHAR(30) NOT NULL,
+UserType VARCHAR(30) NOT NULL,
+Username VARCHAR(30) NOT NULL,
+Email VARCHAR(30) NOT NULL,
+PW VARCHAR(30) NOT NULL,
+FirstName VARCHAR(30) NOT NULL,
+LastName VARCHAR(30) NOT NULL,
+Address VARCHAR(100) NOT NULL,
+DOB DATE NOT NULL,
+VendorID VARCHAR(30) NULL,
+
+CONSTRAINT Customer_PK PRIMARY KEY(CustomerID),
+CONSTRAINT Customer_FK1 FOREIGN KEY(VendorID) REFERENCES Vendor(VendorID)
+);
+
+CREATE TABLE Market(
+MarketID VARCHAR(30) NOT NULL,
+MarketName VARCHAR(30) NOT NULL,
+MarketAddress VARCHAR(100) NOT NULL,
+MarketEvents VARCHAR(1000) NOT NULL,
+MarketDate DATE NOT NULL,
+MarketStart TIME NOT NULL,
+MarketEnd TIME NOT NULL,
+AdminID VARCHAR(30) NOT NULL,
+
+CONSTRAINT Market_PK PRIMARY KEY(MarketID),
+CONSTRAINT AdminID_FK1 FOREIGN KEY(AdminID) REFERENCES Admin(AdminID)
+);
+
+CREATE INDEX mkt_add
+ON Market(MarketAddress);
+
+CREATE TABLE MarketSchedule(
+MarketID VARCHAR(30) NOT NULL,
+MarketAddress VARCHAR(100) NOT NULL,
+MarketDirection VARCHAR(1000) NOT NULL,
+MarketDate DATE NOT NULL,
+MarketStart TIME NOT NULL,
+MarketEnd TIME NOT NULL,
+VendorID VARCHAR(30) NOT NULL,
+
+CONSTRAINT Market_PK1 PRIMARY KEY(MarketID),
+CONSTRAINT Market_FK1 FOREIGN KEY(MarketID) REFERENCES Market(MarketID),
+CONSTRAINT Market_FK2 FOREIGN KEY(VendorID) REFERENCES Vendor(VendorID)
+);
+
+CREATE TABLE Product(
+ProductID VARCHAR(30) NOT NULL,
+ProductName VARCHAR(30) NOT NULL,
+ProductCategory VARCHAR(30) NOT NULL,
+ProductDescription VARCHAR(1000) NOT NULL,
+ProductQuantity VARCHAR(30) NOT NULL,
+ProductPrice FLOAT(10) NOT NULL,
+VendorID VARCHAR(30) NOT NULL,
+
+CONSTRAINT Product_PK1 PRIMARY KEY(ProductID),
+CONSTRAINT VendorID_FK1 FOREIGN KEY(VendorID) REFERENCES Vendor(VendorID)
+);
+
+CREATE TABLE Report(
+ReportID VARCHAR(30) NOT NULL,
+ReportDate DATE NOT NULL,
+
+CONSTRAINT Report_PK1 PRIMARY KEY(ReportID)
+);
+
+CREATE TABLE VendorReport(
+ReportID VARCHAR(30) NOT NULL,
+ReportType VARCHAR(30) NOT NULL,
+SalesInfo VARCHAR(1000) NOT NULL,
+InventoryInfo VARCHAR(1000) NOT NULL,
+CustomerInfo VARCHAR(1000) NOT NULL,
+VendorID VARCHAR(30) NOT NULL,
+
+CONSTRAINT VendorReport_PK1 PRIMARY KEY(ReportID),
+CONSTRAINT VendorReport_FK1 FOREIGN KEY(ReportID) REFERENCES Report(ReportID),
+CONSTRAINT VendorID_FK2 FOREIGN KEY(VendorID) REFERENCES Vendor(VendorID)
+);
+
+CREATE TABLE AdminReport(
+ReportID VARCHAR(30) NOT NULL,
+ReportType VARCHAR(30) NOT NULL,
+MarketInfo VARCHAR(1000) NOT NULL,
+VendorInfo VARCHAR(1000) NOT NULL,
+AdminID VARCHAR(30) NOT NULL,
+
+CONSTRAINT AdminReport_PK1 PRIMARY KEY(ReportID),
+CONSTRAINT AdminReport_FK1 FOREIGN KEY(ReportID) REFERENCES Report(ReportID),
+CONSTRAINT AdminID_FK2 FOREIGN KEY(AdminID) REFERENCES Admin(AdminID)
+);
+
+--
+--
+
+INSERT INTO Admin(AdminID,UserType,Username,Email,PW,FirstName,LastName,Address,PhoneNumber,WorkingHours) VALUES
+(3001,'Admin','Madmin','Margaret.T05@gmail.com','Margt@05','Margaret','Thames','9819 Hillcrest Drive, Arlington, VA 93718','2411552251','6'),
+(3002,'Admin','Dav1d','D.Abraham1975@gmail.com','DA@7519','David','Abraham','8292 Crest Ct, Arlington, VA 48490','7051662547','8'),
+(3003,'Admin','Smallfinger','Arnie.White41@outlook.com','White41!!','Arnold','White','8493 Mulholland Drive, Vienna VA','7059884520','8'),
+(3004,'Admin','Greenman130','Michael.Greene0130@gmail.com','Greene12','Michael','Greene','6221 High Drive, Fairfax, VA 22046','2411552252','6'),
+(3005,'Admin','Carrotcake74','Carol.1985@gmail.com','Car85','Carol','Watkins','6221 Greengrove Street, Arlington, VA 22014','2411999840','4');
+
+INSERT INTO Vendor(VendorID,UserType,Username,Email,PW,FirstName,LastName,Address,WorkingLocations,RegistrationDate) VALUES
+(2001,'Vendor','MKFarms','MK.Farms71@gmail.com','MK@71','Michael','Keeves','10 Bel Air, Hyattsville MD 20782',"'Dupont Circle','Columbia Heights'", '2020-02-01'),
+(2002,'Vendor',"Gio's Pizza",'Giopizza1941@gmail.com','GP1941','Giovanni','Polizzi','20 Landing End, Rockville, MD 20788','Columbia Heights', '2020-04-10'),
+(2003,'Vendor',"Mia's Produce",'Mia.produce2665@outlook.com','MP@2665','Miranda','Gonzalves','782 Crossing Air, Ashburn, VA 89782','Dupont Circle', '2020-06-25'),
+(2004,'Vendor','Crumble Fumble Bakery','Crumble.fumble10@gmail.com','Crumble@10','Alex','Rivera','213 Heilend Drive, Dallas, TX 75252','Dupont Circle', '2020-08-01'),
+(2005,'Vendor','Onyx Jewellery','Onyx01410@gmail.com','O@01410','Steven','Burns','7626 Beverly Heights, Potomac, MD 20785','Dupont Circle', '2021-01-01');
+
+INSERT INTO Customer(CustomerID,UserType,Username,Email,PW,FirstName,LastName,Address,DOB) VALUES
+(1001,'Customer','LD17','Ldiaz17@gmail.com','Deeazz@1717','Luis','Diaz','8121 Merseyside Blvd, Fairfax, VA 22044','1995-08-01'),
+(1002,'Customer','Bobby09','Robb09Firmino@outlook.com','Bobbie-09','Roberto','Firmino','31140 Kops End Drive, Apt. 14B, Merrifield, VA 22016','1994-06-24'),
+(1003,'Customer','LXNDR66','Alex66@gmail.com','LX@66','Trent','Alexander-Arnold','241 Oakwood Drive, Arlington, VA 22012','1998-04-24'),
+(1004,'Customer','Thiagogo','T.Alcantara06@gmail.com','Thiago0606','Thiago','Alcantara','1820 Sunset Blvd, Suitland, MD 22044','1991-04-12'),
+(1005,'Customer','Abeck01','Alisson.01@gmail.com','Al@01','Alisson','Becker','9661 Theodore Blvd, Washington, DC 22047','1992-06-17');
+
+INSERT INTO Market(MarketID,MarketName,MarketAddress,MarketEvents,MarketDate,MarketStart,MarketEnd,AdminID) VALUES
+(4001,'Dupont Circle','1600 20th St NW, Washington, DC 20009','Pie Eating Contest','2022-12-03','08:00:00','12:00:00',3001),
+(4002,'Columbia Heights','1400 Park Rd NW, Washington, DC 20010','N/A','2022-12-03','08:00:00','12:00:00',3001),
+(4003,'Dupont Circle','1600 20th St NW, Washington, DC 20009','N/A','2022-12-10','08:00:00','12:00:00',3001),
+(4004,'Columbia Heights','1400 Park Rd NW, Washington, DC 20010','Henna Workshop','2022-12-10','08:00:00','12:00:00',3002),
+(4005,'Dupont Circle','1600 20th St NW, Washington, DC 20009','N/A','2022-12-17','08:00:00','12:00:00',3002);
+
+INSERT INTO Product(ProductID,ProductName,ProductCategory,ProductDescription,ProductQuantity,ProductPrice,VendorID) VALUES
+(5001,'Apples','Fruits',"Farm-fresh Honeycrisp apples. Crispy and delicious!",'100 pieces','1.00','2003'),
+(5002,'Cheese','Dairy',"Homemade goat cheese.",'5 lbs','10.00','2001'),
+(5003,'Milk','Dairy',"Fresh milk.",'2 gallons','5.00','2001'),
+(5004,'Bread','Bakery',"Freshly-baked cinnamon bread.",'10 loaves','5.00','2004'),
+(5005,'Spinach','Vegetable',"Organic spinach.",'5 lbs','3.00','2003');
+
+INSERT INTO Report(ReportID,ReportDate) VALUES
+(6001,'2022-11-29'),
+(6002,'2022-11-29'),
+(6003,'2022-12-01'),
+(6004,'2022-12-03'),
+(6005,'2022-12-08');
+
+INSERT INTO VendorReport(ReportID,ReportType,SalesInfo,InventoryInfo,CustomerInfo,VendorID) VALUES
+(6001,'Vendor',"Receipt# SI-100410","II-200630","FI-11202020",'2001'),
+(6002,'Vendor',"Receipt# SI-100411","II-200631","FI-11212023",'2001'),
+(6003,'Vendor',"Receipt# SI-100412","II-200632","FI-11222022",'2001');
+
+INSERT INTO AdminReport(ReportID,ReportType,MarketInfo,VendorInfo,AdminID) VALUES
+(6004,'Admin',"MI-100300","VI-200120",'3001'),
+(6005,'Admin',"MI-100301","VI-200120",'3001');
+
+INSERT INTO MarketSchedule(MarketID,MarketAddress,MarketDirection,MarketDate,MarketStart,MarketEnd,VendorID) VALUES
+(4001,'1600 20th St NW, Washington, DC 20009','Enter through Q Street','2022-12-03','08:00:00','12:00:00','2001'),
+(4002,'1400 Park Rd NW, Washington, DC 20010','Enter through Park Road','2022-12-03','08:00:00','12:00:00','2001'),
+(4003,'1600 20th St NW, Washington, DC 20009','Enter through Q Street','2022-12-10','08:00:00','12:00:00','2002'),
+(4004,'1400 Park Rd NW, Washington, DC 20010','Enter through Park Road','2022-12-10','08:00:00','12:00:00','2002'),
+(4005,'1600 20th St NW, Washington, DC 20009','Enter through Q Street','2022-12-17','08:00:00','12:00:00','2003');
+
+--
+--
+
+SELECT * FROM Vendor;
+
+SELECT * FROM Customer
+WHERE Address LIKE '%MD%';
+
+SELECT * FROM MarketSchedule
+WHERE VendorID = 2001;
